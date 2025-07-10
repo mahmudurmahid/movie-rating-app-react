@@ -26,3 +26,5 @@ export default function StarRating({ maxRating = 5 }) {
     </div>
   );
 }
+
+function Star() {}
