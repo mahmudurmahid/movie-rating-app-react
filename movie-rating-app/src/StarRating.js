@@ -75,11 +75,3 @@ function Star({ onRate, full }) {
     </span>
   );
 }
-
-/*
-
-EMPTY STAR
-
-
-
-*/
