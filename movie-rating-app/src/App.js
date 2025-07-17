@@ -59,8 +59,6 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const tempQuery = "interstellar";
-
   useEffect(
     function () {
       async function fetchMovies() {
