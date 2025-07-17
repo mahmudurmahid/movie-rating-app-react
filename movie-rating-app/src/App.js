@@ -127,7 +127,7 @@ export default function App() {
         <Box>
           <>
             {selectedId ? (
-              <MovieDetail
+              <MovieDetails
                 selectedId={selectedId}
                 onCloseMovie={handleCloseMovie}
               />
@@ -258,7 +258,7 @@ function Movie({ movie, onSelectMovie }) {
   );
 }*/
 
-function MovieDetail({ selectedId, onCloseMovie }) {
+function MovieDetails({ selectedId, onCloseMovie }) {
   const [movie, setMovie] = useState({});
 
   const {
