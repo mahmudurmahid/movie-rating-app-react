@@ -270,6 +270,9 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const [userRating, setUserRating] = useState("");
 
   const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId);
+  const watchedUserRating = watched.find(
+    (movie) => movie.imdbID === selectedId
+  )?.userRating;
 
   const {
     Title: title,
@@ -354,7 +357,10 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
                   )}{" "}
                 </>
               ) : (
-                <p>Looks like you’ve already rated this one!</p>
+                <p>
+                  Looks like you’ve already rated this one {watchedUserRating}
+                  <span>⭐️</span>
+                </p>
               )}
             </div>
             {/* <div className="rating">
